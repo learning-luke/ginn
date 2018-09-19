@@ -1,0 +1,321 @@
+body {
+  font-family: Helvetica Neue, Arial, sans-serif;
+  text-align: center;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+h1 {
+  font-weight: 200;
+  font-size: 3em;
+  margin: 0 0 0.1em 0;
+}
+
+h2 {
+  font-weight: 200;
+  font-size: 0.9em;
+  margin: 0 0 50px;
+  color: #999;
+}
+
+
+
+
+
+.imgwrapper {
+
+    margin: 0 auto;
+    
+
+}
+
+.hypers {
+    position: relative;
+    height: 25vh;
+    width: auto;
+    top: 0;
+    z-index: 1;
+}
+
+.lower {
+    position: relative;
+    height: 73vh;
+    width: auto;
+    top: 1;
+    z-index: 1;
+}
+
+.split-60 {
+  height: 73%;
+  width: 60%;
+  position: fixed;
+  z-index: 2;
+  top: 1;
+  overflow-x: hidden;
+}
+
+.split-40 {
+  height: 73%;
+  width: 40%;
+  position: fixed;
+  z-index: 2;
+  top: 1;
+  overflow-x: hidden;
+}
+
+
+
+/* Control the left side */
+.left {
+  left: 0;
+  overflow-y: hidden;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+ 
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.flex-item-left {
+    width: 33%;
+    height: auto;
+    background: #ffffff;
+}
+
+.flex-item-left-90 {
+    width: 98%;
+    height: 3vh;
+    background: #ffffff;
+}
+
+.flex-item-right-10 {
+    width: 3vh;
+    height: 3vh;
+    background: #ffffff;
+}
+
+.flex-item-half {
+    width: 50%;
+    height: 100%;
+}
+
+.flex-item-25 {
+    width: 25%;
+    height: 10vh;
+}
+
+.flex-item-middle {
+    width: 33%;
+    height: auto;
+    background: #ffffff;
+}
+
+.flex-container-central {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-item-central {
+	max-width: 70vw;
+	align-items: center;
+}
+
+.flex-item-right {
+    width: 33%;
+    height: auto;
+    background: #ffffff;
+}
+
+
+#flex-container-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.flex-item-down {
+    height: 33%;
+    width: auto;
+}
+
+.flex-item-slider {
+    height: 13%;
+    width: auto;
+}
+
+.flex-item-charts {
+    height: 87%;
+    width: auto;
+}
+
+.row-div{
+    margin: 0;
+    width: auto;
+    height: 50%;
+    
+}
+
+.text-div{
+    padding: 2%;
+    cursor: pointer;
+}
+
+.select-all{
+    width: auto;
+    height: auto;
+    background: #dfdfdf;
+}
+
+
+
+ /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+} 
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    
+}
+
+tr {
+    border-bottom: 1px solid #ccc;
+   
+}
+
+.help-feature {
+    border-right: 1px solid #ccc;
+    font-weight: bold;
+    padding: 5px 5px 5px 5px;
+}
+
+.help-explaination {
+    padding: 5px 5px 5px 5px;
+}
+
+
+a.buttonGood {
+
+  
+  display: inline-flex;
+  align-items: center; 
+  justify-content: center;
+  padding: 0 0;
+  border: 0.1em solid #00b6ff;
+  margin: 0 0 0 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #0078ff;
+  width: 95%;
+  height: 100%;	
+  background-color: #fff;
+  transition: all 0.15s;
+}
+a.buttonGood:hover {
+  
+  color: #fff;
+  border-color: #0078ff;
+  background-color: #00b6ff;
+}
+
+a.buttonBad {
+  display: inline-flex;
+  align-items: center; 
+  justify-content: center;
+  padding: 0 0;
+  border: 0.1em solid #ff623f;
+  margin: 0 0 0 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #ff1f00;
+  width: 95%;
+  height: 100%;
+  background-color: #fff;
+  text-align: center;
+  transition: all 0.15s;
+}
+a.buttonBad:hover {
+  
+  color: #fff;
+  border-color: #ff1f00;
+  background-color: #ff623f;
+}
+@media all and (max-width: 30em) {
+  a.buttonGood {
+    display: block;
+    margin: 0.4em auto;
+  }
+  
+  a.buttonBad {
+    display: block;
+    margin: 0.4em auto;
+  }
+}
+
+

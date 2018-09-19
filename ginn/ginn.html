@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>GINN: Geometric Illustration of Neural Networks</title>
+        
+        <script src="scripts/Chart.bundle.js"></script>
+        <script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        
+        <!-- Dragdealer JS -->
+        <script src="scripts/dragdealer.js"></script>
+        <!-- Dragdealer CSS -->
+        <link  href="css/dragdealer.css" rel="stylesheet" type="text/css">
+        
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src='data/training_stats.js'></script>
+        <script src="scripts/global_vars.js"></script>
+    </head>
+    <body>
+        <div id="flex-container-col">
+            <div class="hypers">
+                <div id="flex-container-col">
+                    <div class="flex-item-charts" >
+                         <canvas id="lossChart" style="width:100%;height:100%;"></canvas>
+                    </div>
+                    
+                         
+                    <div class="flex-item-slider">
+                        <div id="flex-container">
+                            <div class="flex-item-left-90">
+                                <div id="just-a-slider" class="dragdealer">
+                                    <div class="handle red-bar">
+                                        <span class="value"></span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="flex-item-left-10">
+                            
+                                <img id="help-button" src="images/help.svg" alt="HELP" style="width:auto;height:3vh;cursor:pointer;">
+                        
+                        </div>
+                    </div>
+                    
+                
+                </div>
+                
+                <script src="scripts/plotting.js"></script> 
+                
+            </div>
+        
+            <div class="lower">
+                <div class="split-60 left" id="ginDiv">
+                   
+                    <div class="imgwrapper">
+                        <canvas id="ginImage"></canvas>
+                    </div>
+                    
+                </div>
+                
+                <div class="split-40 right" id="textDiv">
+                    <div id="flex-container">
+                        <div class="flex-item-half" style="background: #75d8ff;">
+                            <div id="networkOutput">
+                                <div class="text-div">Network Output</div>
+                            </div>
+                        </div>
+                        <div class="flex-item-half" style="background: #dfdfdf">
+                            <div id="targetData">
+                                <div class="text-div">Target Data</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="selectAllDiv" class="select-all">
+                        <div class="text-div">Show All Units</div>
+                    </div>
+                    <div id="unselectAllDiv" class="select-all">
+                        <div class="text-div">Hide All Units</div>
+                    </div>
+                    <div id="flex-container">
+                        <div class="flex-item-left" style="background: #dfdfdf">
+                            <div id="selectLayer1">
+                            
+                        <div class="text-div">Show Layer 1</div>
+                            </div>
+                            <div id="unselectLayer1">
+                                <div class="text-div">Hide Layer 1</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex-item-middle" style="background: #dfdfdf">
+                            <div id="selectLayer2">
+                                <div class="text-div">Show Layer 2</div>
+                            </div>
+                            <div id="unselectLayer2">
+                                <div class="text-div">Hide Layer 2</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex-item-right" style="background: #dfdfdf">
+                            <div id="selectLayer3">
+                                <div class="text-div">Show Layer 3</div>
+                            </div>
+                            <div id="unselectLayer3">
+                                <div class="text-div">Hide Layer 3</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="flex-container">
+                    
+                        <div class="flex-item-left" style="background: #00b6ff; border: hidden;">
+                            <div id="flex-container-col">
+                                <div class="flex-item-down" >
+                                    <div id="layer0unit0">
+                                        <div class="text-div">1</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer0unit1">
+                                        <div class="text-div">2</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer0unit2">
+                                        <div class="text-div">3</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer0unit3">
+                                        <div class="text-div">4</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer0unit4">
+                                        <div class="text-div">5</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer0unit5">
+                                        <div class="text-div">6</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer0unit6">
+                                        <div class="text-div">7</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer0unit7">
+                                        <div class="text-div">8</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer0unit8">
+                                        <div class="text-div">9</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer0unit9">
+                                        <div class="text-div">10</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer0unit10">
+                                        <div class="text-div">11</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer0unit11">
+                                        <div class="text-div">12</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer0unit12">
+                                        <div class="text-div">13</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer0unit13">
+                                        <div class="text-div">14</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer0unit14">
+                                        <div class="text-div">15</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer0unit15">
+                                        <div class="text-div">16</div>
+                                    </div>
+                                </div>
+                                
+                            
+                            </div>
+                        </div>
+                        
+                        <div class="flex-item-left" style="background: #ff623f">
+                            <div id="flex-container-col">
+                                <div class="flex-item-down" >
+                                    <div id="layer1unit0">
+                                        <div class="text-div">1</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer1unit1">
+                                        <div class="text-div">2</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer1unit2">
+                                        <div class="text-div">3</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer1unit3">
+                                        <div class="text-div">4</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer1unit4">
+                                        <div class="text-div">5</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer1unit5">
+                                        <div class="text-div">6</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer1unit6">
+                                        <div class="text-div">7</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer1unit7">
+                                        <div class="text-div">8</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer1unit8">
+                                        <div class="text-div">9</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer1unit9">
+                                        <div class="text-div">10</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer1unit10">
+                                        <div class="text-div">11</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer1unit11">
+                                        <div class="text-div">12</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer1unit12">
+                                        <div class="text-div">13</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer1unit13">
+                                        <div class="text-div">14</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer1unit14">
+                                        <div class="text-div">15</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer1unit15">
+                                        <div class="text-div">16</div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="flex-item-left" style="background: #c3ff17">
+                            <div id="flex-container-col">
+                                <div class="flex-item-down" >
+                                    <div id="layer2unit0">
+                                        <div class="text-div">1</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer2unit1">
+                                        <div class="text-div">2</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer2unit2">
+                                        <div class="text-div">3</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer2unit3">
+                                        <div class="text-div">4</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer2unit4">
+                                        <div class="text-div">5</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer2unit5">
+                                        <div class="text-div">6</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer2unit6">
+                                        <div class="text-div">7</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer2unit7">
+                                        <div class="text-div">8</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer2unit8">
+                                        <div class="text-div">9</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer2unit9">
+                                        <div class="text-div">10</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer2unit10">
+                                        <div class="text-div">11</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer2unit11">
+                                        <div class="text-div">12</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer2unit12">
+                                        <div class="text-div">13</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer2unit13">
+                                        <div class="text-div">14</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer2unit14">
+                                        <div class="text-div">15</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex-item-down">
+                                    <div id="layer2unit15">
+                                        <div class="text-div">16</div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        <script src='data/data_first.js'></script>
+        <script src='data/data_last.js'></script>
+        
+        <script src="scripts/script.js"></script>
+        <div id="helpModel" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h1> GINN: Geometric Illustration of Neural Networks</h1>
+                <h3> Help and Features</h3>
+                <p> This illustration is designed to show the non-linear boundaries of neurons in a neural network. The point at which any neuron in a 3 layer (each of which has 16 neurons) neural network moves from inactive to active can be visualised as a line (for ReLUs, in this case). The image on the left can either show the target data or the network's predictions. The loss curve at the top accompanies the visualisation to relate loss and performance. </p>
+                <p style="font-weight: bold;"> An individual data item is an (x, y) pixel location and the target is a single binary value representing either a black or white intensity. </p>
+                <p> Therefore, this visualisation shows the ENTIRE DATA DOMAIN at all times - the image on the left is NOT the input to the network. Instead, an individual pixel location is fed into it to produce predictions </p>
+                <p> Roughly from the top down, these are the features of this demonstration.</p>
+                 <table style="width:100%">
+                    <col width="10%">
+                    <col width="90%">
+                    <tr></tr>
+                    <tr>
+                        <td class="help-feature" align="right">Loss Curve, top</td>
+                        <td class="help-explaination" align="left">The loss as training progressed for this run. Note that this is not in linear (or logarithmic) scale. We have selected a varying range of points for visualisation, with more corresponding to early training. </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td class="help-feature" align="right">Slider</td>
+                        <td class="help-explaination" align="left">This slider is the mechanism for exploring how things change during training. Select some neurons (bottom right) and scroll through the training iterations.</td>
+                    
+                    </tr>
+                    
+                    <tr>
+                        <td class="help-feature" align="right">Image, bottom left</td>
+                        <td class="help-explaination" align="left">This image can either show the network output (predictions) at all possible input locations, thus visualising the function this network is mapping, or it can show the original training data. The buttons to the right switch between these states. </td>
+                    
+                    </tr>
+                    
+                    <tr>
+                        <td class="help-feature" align="right">Buttons, bottom right</td>
+                        <td class="help-explaination" align="left">These buttons allow you to select and unselect neurons for visualisation to explore how their non-linear boundaries change as learning progresses.</td>
+                    
+                    </tr>
+                    
+                    <tr>
+                        <td class="help-feature" align="right">Spacebar, +, -</td>
+                        <td class="help-explaination" align="left">Spacebar sets the slider in automatic motion, + increases its speed, and - decreases it.</td>
+                    
+                    </tr>
+                </table> 
+                <h3> Network diagram: colours match the illustration </h3>
+                
+                <img src="images/network_diagram++.svg" alt="HELP" style="width:90%;height:auto;cursor:pointer;">
+                
+                <p> The inputs are (x, y) pixel locations and the output is the predicted probability that the given (x, y) location is a white pixel. This is trained as a classifier with two classes. </p>
+                <p> Each arrow represents a weight and bias in the network. </p>
+            </div>
+        </div>
+        <script src="scripts/popup.js"></script>
+    </body>
+</html>
